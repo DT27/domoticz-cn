@@ -8,7 +8,7 @@
 
 数据库文件、ssl证书文件、日志文件及博联万能遥控配置文件目录均为`/config`
 
-默认http端口`8080`，默认https端口`443`
+默认http端口`31080`，默认https端口`31443`
 
 内置博联相关插件 [博联专区](https://www.domoticz.cn/forum/viewforum.php?f=33)
 

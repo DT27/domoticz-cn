@@ -8,7 +8,7 @@
 
 网页登录帐号密码均为`domoticz`，请在设置中更改
 
-Domoticz主目录为：/home/root/domoticz/
+Docker容器系统中Domoticz主目录为：`/home/root/domoticz/`
 
 数据库文件、ssl证书文件、日志文件均在Domoticz根目录中。
 

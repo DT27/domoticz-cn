@@ -1,5 +1,7 @@
 # Domoticz Docker版 中文
 
+## 安装命令：docker pull dt27/domoticz-cn:Stable
+
 代码与原版一样，无改动
 
 设置默认语言为中文
@@ -19,3 +21,5 @@
 内置智能电表插件 [Controlsys-Ammeter](https://www.domoticz.cn/forum/viewtopic.php?f=11&t=102)
 
 内置斐讯悟空M1空气管家插件 [Phicomm-M1](https://www.domoticz.cn/forum/viewtopic.php?f=11&t=165)
+
+Docker常用命令：https://dt27.org/codes/docker-101/

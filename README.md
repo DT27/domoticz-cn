@@ -8,7 +8,7 @@ docker pull docker.mirrors.ustc.edu.cn/dt27/domoticz-cn:Stable
 
 ## 推荐启动命令：
 ```
-docker run -d -i -t --name domoticz --net host -v /宿主机用于存放博联配置文件的目录:/config dt27/domoticz-cn:Stable
+docker run -d -i -t --name domoticz --net host -v ~/domoticz/config:/config dt27/domoticz-cn:Stable
 ```
 ## 说明
 代码与原版一样，无改动
@@ -21,7 +21,7 @@ Docker容器系统中Domoticz主目录为：`/home/root/domoticz/`
 
 数据库文件、ssl证书文件、日志文件均在Domoticz根目录中。
 
-博联万能遥控配置文件目录推荐设置为`/config`，并将该目录映射到宿主机。
+博联万能遥控配置文件目录默认设置为`/config`，并将该目录映射到宿主机`~/domoticz/config`目录。
 
 默认http端口`31080`，默认https端口`31443`
 

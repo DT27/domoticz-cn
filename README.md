@@ -1,7 +1,16 @@
 # Domoticz Docker版 中文
 
 ## 安装命令：docker pull dt27/domoticz-cn:Stable
+### 如果下载速度太慢或无法下载，可以试试下面这条命令从国内源下载：
+```
+docker pull docker.mirrors.ustc.edu.cn/dt27/domoticz-cn:Stable
+```
 
+## 推荐启动命令：
+```
+docker run -d -i -t --name domoticz --net host -v /宿主机用于存放博联配置文件的目录:/config dt27/domoticz-cn:Stable
+```
+## 说明
 代码与原版一样，无改动
 
 设置默认语言为中文
@@ -15,11 +24,6 @@ Docker容器系统中Domoticz主目录为：`/home/root/domoticz/`
 博联万能遥控配置文件目录推荐设置为`/config`，并将该目录映射到宿主机。
 
 默认http端口`31080`，默认https端口`31443`
-
-推荐启动命令：
-```
-docker run -d -i -t --name domoticz --net host -v /宿主机用于存放博联配置文件的目录:/config dt27/domoticz-cn:Stable
-```
 
 内置博联相关插件 [博联专区](https://www.domoticz.cn/forum/viewforum.php?f=33)
 

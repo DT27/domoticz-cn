@@ -5,4 +5,4 @@ VOLUME /config
 
 EXPOSE 31080 31443
 
-ENTRYPOINT ["/home/root/domoticz/domoticz", "-www", "31080", "-sslwww" ,"31443", "-dbase", "/home/root/domoticz/domoticz.db", "-sslcert", "/home/root/domoticz/server_cert.pem", "-log", "/home/root/domoticz/domoticz.log"]
+ENTRYPOINT ["/src/domoticz/domoticz", "-www", "31080", "-sslwww" ,"31443", "-dbase", "/src/domoticz/domoticz.db", "-sslcert", "/src/domoticz/server_cert.pem", "-log", "/src/domoticz/domoticz.log"]

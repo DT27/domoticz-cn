@@ -24,6 +24,9 @@ docker exec domoticz crond
 
 网页登录帐号密码均为`domoticz`，请在设置中更改
 
+同时需要修改的还有设置中的经纬度，硬件中DarkSky中的经纬度。
+
+
 Docker容器系统中Domoticz主目录为：`/src/domoticz/`
 
 数据库文件、ssl证书文件、日志文件均在Domoticz根目录中。
@@ -33,9 +36,6 @@ Docker容器系统中Domoticz主目录为：`/src/domoticz/`
 映射其它目录前，请先将docker中的现有目录备份，否则会导致docker中的目录被清空。
 
 默认http端口`31080`，默认https端口`31443`
-
-内置的今日天气明日天气更新脚本位于`/src/domoticz/scripts/python/CNWeather3.py`  
-自动更新计划任务修改命令：`crontab -e`
 
 Docker常用命令：https://dt27.org/codes/docker-101/
 

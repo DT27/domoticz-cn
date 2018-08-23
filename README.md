@@ -2,7 +2,16 @@
 
 ![-2018-03-22-19.14.25e83e23bbe8ca896a.jpg](http://youjb.com/images/2018/03/22/-2018-03-22-19.14.25e83e23bbe8ca896a.jpg)
 
-## 安装命令：docker pull dt27/domoticz-cn:Stable
+## 安装命令：
+推荐稳定版 3.8153
+
+```docker pull dt27/domoticz-cn:Stable```
+
+最新稳定版 4.9701
+
+```docker pull dt27/domoticz-cn:Stable-4.9701```
+
+
 ### 如果下载速度太慢或无法下载，可以试试下面这条命令从国内源下载：
 ```
 docker pull docker.mirrors.ustc.edu.cn/dt27/domoticz-cn:Stable
@@ -12,10 +21,6 @@ docker pull docker.mirrors.ustc.edu.cn/dt27/domoticz-cn:Stable
 ```
 docker run -d -i -t --name domoticz --net host -v ~/domoticz/config:/config dt27/domoticz-cn:Stable
 ```
-## 启动后手动启用计划任务
-```
-docker exec domoticz crond
-```
 
 ## 说明
 代码与原版一样，无改动
@@ -24,16 +29,23 @@ docker exec domoticz crond
 
 网页登录帐号密码均为`domoticz`，请在设置中更改
 
-同时需要修改的还有设置中的经纬度，硬件中DarkSky中的经纬度。
+同时需要修改的还有设置中的经纬度，硬件中DarkSky中的经纬度及apikey。
 
 
 Docker容器系统中Domoticz主目录为：`/src/domoticz/`
 
 数据库文件、ssl证书文件、日志文件均在Domoticz根目录中。
 
-博联万能遥控配置文件目录默认设置为`/config`，并将该目录映射到宿主机`~/domoticz/config`目录。
+博联万能遥控配置文件目录默认设置为`/src/domoticz/plugins/BroadlinkRM2/config`。
 
-映射其它目录前，请先将docker中的现有目录备份，否则会导致docker中的目录被清空。
+##！！！关于目录映射！！！
+
+映射，是将宿主机的目录放到docker中。
+
+所以，请不要直接映射docker中已有的目录，会导致docker中已有目录被宿主机目录覆盖。
+
+建议docker运行后，将`/src/domoticz`目录复制到宿主机，然后再将复制出来的目录映射到`/src/domoticz`。
+
 
 默认http端口`31080`，默认https端口`31443`
 
